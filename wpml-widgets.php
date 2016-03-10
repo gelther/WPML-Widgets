@@ -1,5 +1,5 @@
-<?PHP
-/*
+<?php
+/**
  * Plugin Name: 	WPML Widgets
  * Plugin URI: 		http://jeroensormani.com/
  * Description: 	Easily select which widgets you want to show for which languages
@@ -7,9 +7,9 @@
  * Author: 			Jeroen Sormani
  * Author URI: 		http://jeroensormani.com/
  * Text Domain: 	wpml-widgets
-*/
+ */
 
-/*
+/**
  * Copyright Jeroen Sormani
  *
  *     This file is part of WPML Widgets,
@@ -32,13 +32,13 @@
 
 
 /**
- *	Class WPML_Widgets.
+ * Class WPML_Widgets.
  *
- *	Main WPML Widgets class.
+ * Main WPML Widgets class.
  *
- *	@class       WPML_Widgets
- *	@version     1.0.0
- *	@author      Jeroen Sormani
+ * @class       WPML_Widgets
+ * @version     1.0.0
+ * @author      Jeroen Sormani
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -64,7 +64,7 @@ class WPML_Widgets {
 
 		// check if WPML is activated
 		if ( ! function_exists( 'is_plugin_active_for_network' ) ) :
-		    require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
+			require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 		endif;
 
 		if ( ! in_array( 'sitepress-multilingual-cms/sitepress.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) :
@@ -114,9 +114,9 @@ class WPML_Widgets {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param	array 	$widget		Widget instance.
-	 * @param 	null	$form		Return null if new fields are added.
-	 * @param	array	$instance	An array of the widget's settings.
+	 * @param array $widget   Widget instance.
+	 * @param null  $form     Return null if new fields are added.
+	 * @param array $instance An array of the widget's settings.
 	 */
 	public function ww_widget_dropdown( $widget, $form, $instance ) {
 
@@ -150,11 +150,11 @@ class WPML_Widgets {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param	array 	$instance 		List of data.
-	 * @param	array	$new_instance	New instance data.
-	 * @param 	array	$old_instance	List of old isntance data.
-	 * @param 	array	$this2			Class of ..?.
-	 * @return	array					List of modified instance.
+	 * @param  array $instance     List of data.
+	 * @param  array $new_instance New instance data.
+	 * @param  array $old_instance List of old isntance data.
+	 * @param  array $this2        Class of ..?.
+	 * @return array               List of modified instance.
 	 */
 	public function ww_widget_update( $instance, $new_instance, $old_instance, $this2 ) {
 
@@ -172,10 +172,10 @@ class WPML_Widgets {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param	array 	$instance 	List of widget data.
-	 * @param	array	$widget		Widget data.
-	 * @param 	array	$args		List of args.
-	 * @return	array				List of modified widget instance.
+	 * @param  array $instance List of widget data.
+	 * @param  array $widget   Widget data.
+	 * @param  array $args     List of args.
+	 * @return array           List of modified widget instance.
 	 */
 	public function ww_display_widget( $instance, $widget, $args ) {
 
@@ -232,9 +232,12 @@ class WPML_Widgets {
  */
 if ( ! function_exists( 'WPML_Widgets' ) ) :
 
- 	function WPML_Widgets() {
+	function WPML_Widgets() {
+
 		return WPML_Widgets::instance();
+
 	}
+
 
 endif;
 
