@@ -1,5 +1,5 @@
-<?PHP
-/*
+<?php
+/**
  * Plugin Name: 	WPML Widgets
  * Plugin URI: 		http://jeroensormani.com/
  * Description: 	Easily select which widgets you want to show for which languages
@@ -7,9 +7,9 @@
  * Author: 			Jeroen Sormani
  * Author URI: 		http://jeroensormani.com/
  * Text Domain: 	wpml-widgets
-*/
+ */
 
-/*
+/**
  * Copyright Jeroen Sormani
  *
  *     This file is part of WPML Widgets,
