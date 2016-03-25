@@ -1,5 +1,5 @@
-<?PHP
-/*
+<?php
+/**
  * Plugin Name: 	WPML Widgets
  * Plugin URI: 		http://jeroensormani.com/
  * Description: 	Easily select which widgets you want to show for which languages
@@ -7,9 +7,9 @@
  * Author: 			Jeroen Sormani
  * Author URI: 		http://jeroensormani.com/
  * Text Domain: 	wpml-widgets
-*/
+ */
 
-/*
+/**
  * Copyright Jeroen Sormani
  *
  *     This file is part of WPML Widgets,
@@ -32,13 +32,13 @@
 
 
 /**
- *	Class WPML_Widgets.
+ * Class WPML_Widgets.
  *
- *	Main WPML Widgets class.
+ * Main WPML Widgets class.
  *
- *	@class       WPML_Widgets
- *	@version     1.0.0
- *	@author      Jeroen Sormani
+ * @class       WPML_Widgets
+ * @version     1.0.0
+ * @author      Jeroen Sormani
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -64,7 +64,7 @@ class WPML_Widgets {
 
 		// check if WPML is activated
 		if ( ! function_exists( 'is_plugin_active_for_network' ) ) :
-		    require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
+			require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 		endif;
 
 		if ( ! in_array( 'sitepress-multilingual-cms/sitepress.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) :
@@ -232,9 +232,12 @@ class WPML_Widgets {
  */
 if ( ! function_exists( 'WPML_Widgets' ) ) :
 
- 	function WPML_Widgets() {
+	function WPML_Widgets() {
+
 		return WPML_Widgets::instance();
+
 	}
+
 
 endif;
 
